@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "The First Rule of Codesmith",
+  "description": "We do NOT share code!",
+  "author": "Zack V | Mel K.",
+  "version": "1.0",
+  "description": "Replace all images with a specific image.",
+  "permissions": ["activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["contentScript.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["images/CodesmithImage.jpg"],
+      "matches": ["<all_urls>"]
+    }
+  ],  
+
+  "icons": {
+    "48": "images/CodesmithImage.jpg"
+  }
+}
